@@ -24,6 +24,10 @@ int main(int argc, char** argv)
 	cv::Mat F = A.clone();
 	cv::Mat G;
 	A.copyTo(G);	
+	
+	// Mat constructor
+	cv::Mat M(2,2, CV_8UC3, cv::Scalar(0,0,255) );
+	std::cout << "M = " << std::endl << " " << M << std::endl << std::endl;
 
 	// Show the images
 	cv::namedWindow("Image A", cv::WINDOW_AUTOSIZE);
